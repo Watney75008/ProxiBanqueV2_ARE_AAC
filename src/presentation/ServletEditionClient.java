@@ -39,6 +39,7 @@ public class ServletEditionClient extends HttpServlet {
 //		String nom1 = request.getParameter("${clientEnCours.nom}");
 //		String prenom1 = request.getParameter("${clientEnCours.prenom}");
 //		String email1 = request.getParameter("${clientEnCours.email}");
+//		Test
 		
 		RequestDispatcher dispatcher = null;
 		dispatcher = request.getRequestDispatcher("/WEB-INF/results/editionClient.jsp");
