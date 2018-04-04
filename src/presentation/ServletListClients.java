@@ -20,8 +20,11 @@ import services.IClientServices;
 import services.IConseillerServices;
 
 /**
- * Servlet implementation class ServletListClients
+ * Servlet permettant l'affichage de la liste des clients pour le conseiller logué
+ * @author AAC/ARE
+ * @version 2.0
  */
+
 @WebServlet("/ServletListClients")
 public class ServletListClients extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -54,17 +57,10 @@ public class ServletListClients extends HttpServlet {
 		int idConseiller = serviceConseiller.rechercherIdConseiller(login, password);
 		session.setAttribute("sNomConseiller", idConseiller);
 
-//		System.out.println(login + " " + password);
-//		System.out.println("Id conseiller" + idConseiller);
-
 		// 2. Récupérer les clients de ce conseiller
 		IClientServices serviceClient = new ClientServicesImpl();
 		List<Client> listClientDeCeConseiller = serviceClient.chercherLesClients(idConseiller);
-		
-//		for (Client client : listClientDeCeConseiller) {
-//			System.out.println("client : " + client.getNom());
-//		}
-		
+	
 		// 3. Afficher la liste des clients pour ce conseiller dans la JSP
 		session.setAttribute("sListClients", listClientDeCeConseiller);
 		

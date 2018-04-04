@@ -6,6 +6,12 @@ import metier.Client;
 import persistance.ClientDaoImpl;
 import persistance.IClientDao;
 
+/**
+ * Implémentation de l'interface IClientServices
+ * @author AAC/ARE
+ * @version 2.0
+ */
+
 public class ClientServicesImpl implements IClientServices {
 
 	private IClientDao daoClient = new ClientDaoImpl();
@@ -17,12 +23,12 @@ public class ClientServicesImpl implements IClientServices {
 
 	@Override
 	public void miseAJourClient(Client clientAMAJ) {
-
+		daoClient.updateClient(clientAMAJ);
 	}
 
 	@Override
 	public Client rechercheClient(int idClient) {
-		return null;
+		return daoClient.findClient(idClient);
 	}
 
 }

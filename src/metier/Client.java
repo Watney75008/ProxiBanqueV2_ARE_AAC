@@ -1,5 +1,12 @@
 package metier;
 
+/**
+ * 
+ * @author AAC/ARE
+ * @version 2.0
+ * @category Classe métier Client
+ */
+
 public class Client {
 
 	private int idClient;
@@ -9,9 +16,22 @@ public class Client {
 	private String ville;
 	private String email;
 
+	/**
+	 * 
+	 * @param idClient
+	 * @param nom
+	 * @param prenom
+	 * @param adresse
+	 * @param ville
+	 * @param email
+	 */
 	// Constructeur
 	public Client(int idClient, String nom, String prenom, String adresse, String ville, String email) {
+		this(nom, prenom, adresse, ville, email);
 		this.idClient = idClient;
+	}
+
+	public Client(String nom, String prenom, String adresse, String ville, String email) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.adresse = adresse;
@@ -19,6 +39,8 @@ public class Client {
 		this.email = email;
 	}
 
+	public Client() {
+	}
 	// getters et Setters
 	public int getIdClient() {
 		return idClient;

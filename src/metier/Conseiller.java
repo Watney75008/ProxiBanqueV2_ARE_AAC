@@ -1,5 +1,12 @@
 package metier;
 
+/**
+ * 
+ * @author AAC/ARE
+ * @version 2.0
+ * @category Classe métier Conseiller
+ */
+
 public class Conseiller {
 
 	private int idConseiller;
@@ -8,6 +15,13 @@ public class Conseiller {
 	private String login;
 	private String password;
 	
+	/**
+	 * @param idConseiller
+	 * @param nom
+	 * @param prenom
+	 * @param login
+	 * @param password
+	 */
 	// Constructeur
 	public Conseiller(int idConseiller, String nom, String prenom, String login, String password) {
 		this.idConseiller = idConseiller;

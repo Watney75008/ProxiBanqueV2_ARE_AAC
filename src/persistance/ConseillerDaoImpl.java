@@ -5,6 +5,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Dao Conseiller
+ * @author AAC/ARE
+ * @version 2.0
+ */
+
 public class ConseillerDaoImpl extends DaoJDBC implements IConseillerDao {
 
 	@Override

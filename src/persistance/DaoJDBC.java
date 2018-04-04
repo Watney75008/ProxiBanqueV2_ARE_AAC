@@ -6,6 +6,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Classe de connection et déconnection à la base
+ * @author AAC/ARE
+ * @version 2.0
+ */
+
 public abstract class DaoJDBC {
 	private static String login = "root";
 	private static String password = "";
